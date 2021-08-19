@@ -26,7 +26,7 @@ uvicorn app.main:app
 
 Visit [localhost:8080](http://localhost:8080) in your browser to make sure it worked.
 
-# Run with Docker
+## Run with Docker
 
 ```
 docker build -t <container_name> .
