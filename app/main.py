@@ -17,8 +17,7 @@ def index():
 @app.websocket("/ws/{username}")
 async def websocket_endpoint(websocket: WebSocket, username: str):
     await manager.connect(websocket)
-    print("endpoint")
-    await manager.broadcast("new_member", username)
+    await manager.broadcast("user_joined", username)
 
     try:
         while True:
